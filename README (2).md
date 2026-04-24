@@ -204,7 +204,7 @@ This project covers hands-on implementation of objectives from:
 
 Upcoming additions to this repository:
 
-- [ ] `New-HubSpokeNetwork.ps1` — Deploy a hub and spoke virtual network topology
+- [x] `New-HubSpokeNetwork.ps1` — Deploy a hub and spoke virtual network topology
 - [ ] `Get-VMCostReport.ps1` — Generate a cost report for all lab resources
 - [ ] `New-AzSnapshot.ps1` — Automate VM disk snapshots for backup
 - [ ] `Set-VMTags.ps1` — Apply consistent tags to all lab resources for cost tracking
