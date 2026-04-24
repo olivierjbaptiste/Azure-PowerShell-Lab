@@ -148,6 +148,23 @@ $VMSize        = "YourPreferredSize"
 
 ---
 
+### `New-HubSpokeNetwork.ps1`
+Deploys a hub and spoke virtual network topology in Azure — the standard enterprise network architecture used in production Azure environments.
+
+**What it does:**
+1. Creates a Hub VNet (10.0.0.0/16) — central network all traffic flows through
+2. Creates Spoke 1 VNet (10.1.0.0/16) — isolated network for workloads
+3. Creates Spoke 2 VNet (10.2.0.0/16) — isolated network for future use
+4. Peers Hub to Spoke 1 with forwarded traffic enabled
+5. Peers Hub to Spoke 2 with forwarded traffic enabled
+6. Verifies all peerings are connected
+
+**Usage:**
+```powershell
+.\New-HubSpokeNetwork.ps1
+```
+
+
 ## Finding Available VM Sizes
 
 Azure for Students and free tier subscriptions have quota restrictions. Use this command to find VM sizes available in your region with no restrictions:
