@@ -90,6 +90,33 @@ $ShutdownTime = "2300"                    # 11:00 PM in 24hr format
 $TimeZone     = "Eastern Standard Time"   # Your local timezone
 ```
 
+### `Get-DefenderVulnerabilityReport.ps1`
+Reads exported vulnerability data from Microsoft Defender for Endpoint and generates a professional formatted HTML security report.
+
+**What it does:**
+1. Parses the exported CSV from Microsoft Defender Vulnerability Management
+2. Categorizes findings by severity — Critical, High, and Medium based on exposure score impact
+3. Flags items with known exploits and attention required items
+4. Generates a color-coded HTML report with alert boxes, summary cards, and full recommendations table
+5. Outputs the report as a standalone HTML file — open in any browser or print to PDF
+
+**Usage:**
+```powershell
+.\Get-DefenderVulnerabilityReport.ps1
+```
+
+**How to export data from Defender:**
+1. Go to security.microsoft.com
+2. Navigate to Vulnerability Management → Recommendations
+3. Click Export at the top
+4. Rename the file to `defender-vulnerabilities.csv`
+5. Place it in the same folder as the script
+
+
+
+
+
+
 ---
 
 ## Requirements
@@ -209,7 +236,7 @@ Upcoming additions to this repository:
 - [ ] `New-AzSnapshot.ps1` — Automate VM disk snapshots for backup
 - [ ] `Set-VMTags.ps1` — Apply consistent tags to all lab resources for cost tracking
 - [ ] `Remove-AzLab.ps1` — Clean up all lab resources in one command
-
+- [x] `Get-DefenderVulnerabilityReport.ps1` — Generate HTML vulnerability report from Defender export
 ---
 
 ## Author
